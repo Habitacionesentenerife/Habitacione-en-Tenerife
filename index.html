@@ -1,81 +1,59 @@
-
-<!doctype html><html lang="es">
+<!doctype html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Habitaciones en Tenerife</title>
-<link rel="stylesheet" href="assets/css/style.css">
-<meta name="description" content="Habitaciones individuales y dobles en Tenerife. Contrato claro, convivencia cuidada y gestión por WhatsApp.">
-<link rel="icon" href="assets/img/logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Habitaciones en Tenerife · Gestión integral</title>
+<link rel="preload" href="assets/estilos.css" as="style">
+<link rel="stylesheet" href="assets/estilos.css">
+<meta name="description" content="Alquiler de habitaciones en Tenerife. Gestión integral, contrato claro y comunicación por WhatsApp.">
 </head>
 <body>
 <header>
-  <img class="logo" src="assets/img/logo.png" alt="Habitaciones en Tenerife">
-  <div class="title">
-    <div style="font-size:1.1rem;color:#555;">HABITACIONES EN TENERIFE</div>
-    <small class="muted">WhatsApp · Gestión integral · Contrato claro</small>
-  </div>
+  <nav class="nav container">
+    <div class="title">HABITACIONES EN TENERIFE</div>
+    <a href="#secciones">Secciones</a>
+    <a href="piso1.html">Rent to Rent</a>
+    <a href="https://wa.me/34681905521" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 </header>
 
-<div class="hero">
-  <img src="assets/img/piso1/hab1_1.jpg" class="active" alt="Habitación luminosa">
-  <img src="assets/img/piso1/hab2_1.jpg" alt="Habitación luminosa">
-  <img src="assets/img/piso1/hab4_1.jpg" alt="Habitación de pareja">
-  <img src="assets/img/piso1/comunes_1.jpg" alt="Cocina y zonas comunes">
-  <div class="badge">Tu habitación en Tenerife, sin complicaciones</div>
-</div>
+<main class="container">
+  <section class="hero carousel">
+    <div class="carousel-track">
+      <img src="assets/img/piso1/hab1_1.jpg" alt="Foto" loading="lazy">
+<img src="assets/img/piso1/hab1_2.jpg" alt="Foto" loading="lazy">
+<img src="assets/img/piso1/hab1_3.jpg" alt="Foto" loading="lazy">
+    </div>
+    <div class="badge">Tu habitación en Tenerife, sin complicaciones</div>
+  </section>
 
-<nav class="tabs">
-  <button class="active" data-target="secciones">Secciones</button>
-  <button data-target="rent">Rent to Rent</button>
-  <button data-target="contacto">Contacto</button>
-  <a style="margin-left:auto" href="https://wa.me/34681905521" target="_blank" class="badge">WhatsApp directo</a>
-</nav>
+  <section id="secciones" class="grid" style="margin-top:20px">
+    <div class="card">
+      <h2 style="margin:.2rem 0">Piso – La Cuesta (Urbanización La Florida)</h2>
+      <div class="muted" style="color:#666;margin-bottom:8px">3 habitaciones + zonas comunes · Desde 385€</div>
+      <a class="link" href="piso1.html">Ver habitaciones y zonas comunes →</a>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Rent To Rent</h3>
+      <p>Nos encargamos de **toda** la gestión del piso: selección de inquilinos, contratos, cobros y mantenimiento básico. Pagamos puntual y cuidamos tu vivienda.</p>
+      <a class="link" href="piso1.html">Más detalles →</a>
+    </div>
+  </section>
 
-<section id="secciones" class="panel show">
-  <div class="grid">
-    <a class="card" href="piso1.html">
-      <img src="assets/img/piso1/hab2_2.jpg" alt="Piso La Cuesta">
-      <div class="p">
-        <b>Piso – La Cuesta (Urbanización La Florida)</b><br>
-        <small class="muted">3 habitaciones + zonas comunes · Desde 350€</small>
-      </div>
-    </a>
-  </div>
-</section>
+  <section id="contacto" class="card" style="margin-top:20px">
+    <h3 style="margin-top:0">Contacto</h3>
+    <p>WhatsApp directo: <a class="link" href="https://wa.me/34681905521" target="_blank" rel="noopener">+34 681 905 521</a></p>
+    <p>Correo: <a class="link" href="mailto:habitacionesentenerife@outlook.es">habitacionesentenerife@outlook.es</a></p>
+  </section>
+</main>
 
-<section id="rent" class="panel">
-  <h2>Rent to Rent para propietarios</h2>
-  <p>Nosotros alquilamos tu vivienda y nos encargamos de <b>toda la gestión</b>: selección de inquilinos, cobros, mantenimiento básico y convivencia. Tú cobras puntualmente y te olvidas de la operativa.</p>
-  <ul>
-    <li>Pago fijo mensual, sin sorpresas.</li>
-    <li>Vivienda cuidada y supervisada.</li>
-    <li>Contratos claros y asistencia por WhatsApp.</li>
-  </ul>
-  <div class="note">¿Eres propietario/a? Escríbenos al <a href="mailto:habitacionesentenerife@outlook.es">habitacionesentenerife@outlook.es</a> o WhatsApp.</div>
-</section>
-
-<section id="contacto" class="panel">
-  <h2>Contacto</h2>
-  <p><b>WhatsApp:</b> <a href="https://wa.me/34681905521" target="_blank">+34 681 905 521</a><br>
-     <b>Email:</b> <a href="mailto:habitacionesentenerife@outlook.es">habitacionesentenerife@outlook.es</a></p>
-  <h3>Zonas</h3>
-  <p>
-    <button onclick="openZone('Santa Cruz de Tenerife')">Santa Cruz</button>
-    <button onclick="openZone('San Cristóbal de La Laguna')">La Laguna</button>
-    <button onclick="openZone('La Cuesta, La Laguna')">La Cuesta</button>
-  </p>
-  <small class="muted">Precios orientativos según habitación: <b>350€–550€</b> (todo incluido).</small>
-</section>
-
-<div class="cta">
-  <a href="https://wa.me/34681905521" target="_blank">WhatsApp</a>
-  <a class="tel" href="tel:+34681905521">Llamar</a>
-</div>
-
-<footer>
-  <div><b>Habitaciones en Tenerife</b> · Gestión integral · Convivencia cuidada</div>
-  <small class="muted">© 2025 · habitacionesentenerife.com</small>
+<footer class="container">
+  © 2025 · habitacionesentenerife.com
 </footer>
-<script src="assets/js/app.js"></script>
-</body></html>
+
+<div class="lightbox"><div class="close">Cerrar</div><img src="" alt=""></div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
