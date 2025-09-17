@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Habitaciones en Tenerife – Gestión integral</title>
+  <!-- Use the stylesheet inside the assets/css folder -->
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="Alquiler de habitaciones en Tenerife. Gestión integral, contratos claros y comunicación cercana con propietarios y huéspedes.">
+</head>
+<body>
+  <!-- Cabecera de la página con navegación -->
+  <header>
+    <div class="nav container">
+      <div class="title">HABITACIONES EN TENERIFE</div>
+      <nav>
+        <a href="#secciones">Secciones</a>
+        <a href="#zonas">Zonas</a>
+        <a href="#rent-to-rent">Rent To Rent</a>
+        <a href="#conocenos">Conócenos</a>
+        <a href="https://wa.me/+34681905521" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Carrusel de imágenes: se ha reducido la altura en CSS y añadido más fotografías de habitaciones -->
+    <section class="hero carousel">
+      <div class="carousel-track">
+        <!-- Imágenes de habitaciones y paisajes, se cargarán de forma rotativa -->
+        <img src="hab1_1.jpg" alt="Habitación luminosa" loading="lazy">
+        <img src="hab1_2.jpg" alt="Habitación acogedora" loading="lazy">
+        <img src="hab1_3.jpg" alt="Habitación moderna" loading="lazy">
+        <img src="a4357890-ab05-4e78-be42-c473b936915e.png" alt="Habitación acogedora (generada)" loading="lazy">
+        <img src="a41008be-fd1e-43cd-abd1-a84da318e873.png" alt="Paisaje de Tenerife" loading="lazy">
+        <img src="b24273f4-68db-4e74-a94b-5dd939c8ff28.png" alt="Casas tradicionales" loading="lazy">
+      </div>
+      <div class="badge">Tu habitación en Tenerife, sin complicaciones</div>
+    </section>
+
+    <!-- Sección para buscar habitaciones por municipio: se presenta contraída por defecto -->
+    <section>
+      <details id="zonas">
+        <summary>Buscar por zonas</summary>
+        <p>Elige el municipio donde quieres alquilar habitación:</p>
+        <select id="municipioSelect">
+          <option value="">Selecciona un municipio</option>
+          <option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
+          <option value="San Cristóbal de La Laguna">San Cristóbal de La Laguna</option>
+          <option value="La Orotava">La Orotava</option>
+          <option value="Puerto de la Cruz">Puerto de la Cruz</option>
+          <option value="Candelaria">Candelaria</option>
+          <option value="Arona">Arona</option>
+          <option value="Adeje">Adeje</option>
+          <option value="Güímar">Güímar</option>
+          <option value="Icod de los Vinos">Icod de los Vinos</option>
+        </select>
+        <p id="zonaResult"></p>
+      </details>
+    </section>
+
+    <!-- Explicación del modelo Rent To Rent: contraído por defecto -->
+    <section>
+      <details id="rent-to-rent">
+        <summary>Rent To Rent para propietarios</summary>
+        <p>Nos encargamos de <strong>toda la gestión integral</strong> de tu inmueble: buscamos y seleccionamos a los inquilinos adecuados, redactamos y gestionamos los contratos, realizamos los cobros puntuales y nos ocupamos del mantenimiento básico.</p>
+        <p>Mediante el modelo Rent To Rent, te garantizamos un <strong>ingreso mensual fijo</strong> y cuidamos tu vivienda como si fuera nuestra. Nos ocupamos de reformas y mejoras cuando sea necesario y nos responsabilizamos de mantener el inmueble en óptimas condiciones.</p>
+        <p>Olvídate de preocupaciones y disfruta de la rentabilidad de tu propiedad mientras <strong>nosotros nos ocupamos de todo</strong>.</p>
+      </details>
+    </section>
+
+    <!-- Sección Conócenos: contraída por defecto -->
+    <section>
+      <details id="conocenos">
+        <summary>Conócenos</summary>
+        <p>Somos un equipo con <strong>amplia experiencia en la gestión de alojamientos</strong> en la isla de Tenerife. Llevamos años administrando más de <strong>100 habitaciones</strong> y pisos compartidos, ofreciendo un servicio de calidad tanto a huéspedes como a propietarios.</p>
+        <p>Nuestro compromiso es ofrecer <strong>habitaciones confortables y bien equipadas</strong>, contratos claros y un trato cercano. Conocemos las necesidades de nuestros clientes y trabajamos para que su estancia sea agradable y sin complicaciones.</p>
+        <p>Si buscas alquilar una habitación o quieres poner tu inmueble en manos de profesionales, estás en el lugar indicado.</p>
+      </details>
+    </section>
+
+    <!-- Sección de propiedades en alquiler (secciones) -->
+    <section id="secciones">
+      <h2>Secciones</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="comunes_1.jpg" alt="Zonas comunes" loading="lazy">
+          <h3>Piso – La Cuesta (Urbanización La Florida)</h3>
+          <p>3 habitaciones + zonas comunes · Desde 385€</p>
+          <a href="#rent-to-rent">Ver habitaciones y zonas comunes →</a>
+        </div>
+        <div class="card">
+          <img src="comunes_2.jpg" alt="Zonas comunes" loading="lazy">
+          <h3>Habitación individual – Santa Cruz</h3>
+          <p>Espacio privado con acceso a cocina y baño compartidos · Desde 300€</p>
+          <a href="#rent-to-rent">Ver más detalles →</a>
+        </div>
+        <div class="card">
+          <img src="comunes_3.jpg" alt="Zonas comunes" loading="lazy">
+          <h3>Estudio completo – La Laguna</h3>
+          <p>Estudio independiente totalmente equipado · Desde 450€</p>
+          <a href="#rent-to-rent">Ver más detalles →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Información de contacto -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>WhatsApp directo: <a href="https://wa.me/+34681905521" target="_blank" rel="noopener">+34 681 905 521</a></p>
+      <p>Correo: <a href="mailto:habitacionesentenerife@outlook.es">habitacionesentenerife@outlook.es</a></p>
+    </section>
+  </main>
+
+  <!-- JavaScript para el carrusel y búsqueda de zonas -->
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
