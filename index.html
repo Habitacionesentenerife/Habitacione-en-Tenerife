@@ -4,9 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Habitaciones en Tenerife · Gestión integral</title>
-<link rel="preload" href="assets/estilos.css" as="style">
-<link rel="stylesheet" href="assets/estilos.css">
+<link rel="preload" href="estilos.css" as="style">
+<link rel="stylesheet" href="estilos.css">
 <meta name="description" content="Alquiler de habitaciones en Tenerife. Gestión integral, contrato claro y comunicación por WhatsApp.">
+  <!-- Import modern font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Override some styles: modern font, smaller hero and collapsible sections -->
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+    /* reduce hero height for a more compact banner */
+    .hero { height: 35vh; min-height: 250px; }
+    /* ensure the carousel images don't dominate the page. Limit their height and let them crop gracefully */
+    .carousel img { max-height: 300px; width: 100%; object-fit: cover; }
+    /* styles for collapsible sections */
+    .details-section details { margin: 20px 0; border-radius: 8px; background: #fff; box-shadow: 0 0 4px rgba(0,0,0,0.1); }
+    .details-section summary { font-weight: 600; font-size: 1.2rem; padding: 10px; cursor: pointer; outline: none; }
+    .details-section summary::marker { color: var(--brand); }
+    .details-section div { padding: 0 12px 12px 12px; }
+  </style>
 </head>
 <body>
 <header>
@@ -24,46 +41,61 @@
 <main class="container">
   <section class="hero carousel">
     <div class="carousel-track">
-      <img src="a4357890-ab05-4e78-be42-c473b936915e.png" alt="Habitación acogedora" loading="lazy">
-      <img src="a41008be-fd1e-43cd-abd1-a84da318e873.png" alt="Paisaje de Tenerife" loading="lazy">
-      <img src="b24273f4-68db-4e74-a94b-5dd939c8ff28.png" alt="Edificios típicos" loading="lazy">
+      <!-- Varias imágenes de habitaciones para rotar en el banner principal -->
+      <img src="hab1_1.jpg" alt="Habitación luminosa" loading="lazy">
+      <img src="hab1_2.jpg" alt="Habitación acogedora" loading="lazy">
+      <img src="hab1_3.jpg" alt="Habitación minimalista" loading="lazy">
+      <img src="hab2_1.jpg" alt="Habitación moderna" loading="lazy">
+      <img src="hab4_1.jpg" alt="Habitación con vistas" loading="lazy">
     </div>
     <div class="badge">Tu habitación en Tenerife, sin complicaciones</div>
   </section>
 
-  <!-- Zona selector -->
-  <section id="zonas" class="card" style="margin-top:20px">
-    <h3 style="margin-top:0">Buscar por zonas</h3>
-    <p>Elige el municipio donde quieres alquilar habitación:</p>
-    <select id="municipioSelect" style="width:100%;padding:8px;margin-top:8px">
-      <option value="">Selecciona un municipio</option>
-      <option value="santacruz">Santa Cruz de Tenerife</option>
-      <option value="laguna">San Cristóbal de La Laguna</option>
-      <option value="laorotava">La Orotava</option>
-      <option value="puertodelacruz">Puerto de la Cruz</option>
-      <option value="candelaria">Candelaria</option>
-      <option value="arona">Arona</option>
-      <option value="adeje">Adeje</option>
-      <option value="guimar">Güímar</option>
-      <option value="icod">Icod de los Vinos</option>
-    </select>
-    <div id="zonasResultado" class="muted" style="margin-top:10px;color:#666"></div>
+  <!-- Zona selector (colapsable) -->
+  <section id="zonas" class="details-section" style="margin-top:20px">
+    <details>
+      <summary>Buscar por zonas</summary>
+      <div>
+        <p>Elige el municipio donde quieres alquilar habitación:</p>
+        <select id="municipioSelect" style="width:100%;padding:8px;margin-top:8px">
+          <option value="">Selecciona un municipio</option>
+          <option value="santacruz">Santa Cruz de Tenerife</option>
+          <option value="laguna">San Cristóbal de La Laguna</option>
+          <option value="laorotava">La Orotava</option>
+          <option value="puertodelacruz">Puerto de la Cruz</option>
+          <option value="candelaria">Candelaria</option>
+          <option value="arona">Arona</option>
+          <option value="adeje">Adeje</option>
+          <option value="guimar">Güímar</option>
+          <option value="icod">Icod de los Vinos</option>
+        </select>
+        <div id="zonasResultado" class="muted" style="margin-top:10px;color:#666"></div>
+      </div>
+    </details>
   </section>
 
-  <!-- Rent to Rent Section -->
-  <section id="rent-to-rent" class="card" style="margin-top:20px">
-    <h3 style="margin-top:0">Rent To Rent para propietarios</h3>
-    <p>Nos encargamos de <strong>toda la gestión integral</strong> de tu inmueble: buscamos y seleccionamos a los inquilinos adecuados, redactamos y gestionamos los contratos, realizamos los cobros puntuales y nos ocupamos del mantenimiento básico.</p>
-    <p>Mediante el modelo Rent To Rent, te garantizamos un <strong>ingreso mensual fijo</strong> y cuidamos tu vivienda como si fuera nuestra. Nos ocupamos de reformas y mejoras cuando sea necesario y nos responsabilizamos de mantener el inmueble en óptimas condiciones.</p>
-    <p>Olvídate de preocupaciones y disfruta de la rentabilidad de tu propiedad mientras nosotros nos ocupamos de todo.</p>
+  <!-- Rent to Rent Section (colapsable) -->
+  <section id="rent-to-rent" class="details-section" style="margin-top:20px">
+    <details>
+      <summary>Rent To Rent para propietarios</summary>
+      <div>
+        <p>Nos encargamos de <strong>toda la gestión integral</strong> de tu inmueble: buscamos y seleccionamos a los inquilinos adecuados, redactamos y gestionamos los contratos, realizamos los cobros puntuales y nos ocupamos del mantenimiento básico.</p>
+        <p>Mediante el modelo Rent To Rent, te garantizamos un <strong>ingreso mensual fijo</strong> y cuidamos tu vivienda como si fuera nuestra. Nos ocupamos de reformas y mejoras cuando sea necesario y nos responsabilizamos de mantener el inmueble en óptimas condiciones.</p>
+        <p>Olvídate de preocupaciones y disfruta de la rentabilidad de tu propiedad mientras nosotros nos ocupamos de todo.</p>
+      </div>
+    </details>
   </section>
 
-  <!-- Experience Section -->
-  <section id="conocenos" class="card" style="margin-top:20px">
-    <h3 style="margin-top:0">Conócenos</h3>
-    <p>Somos un equipo con <strong>amplia experiencia en la gestión de alojamientos</strong> en la isla de Tenerife. Llevamos años administrando más de <strong>100 habitaciones</strong> y pisos compartidos, ofreciendo un servicio de calidad tanto a huéspedes como a propietarios.</p>
-    <p>Nuestro compromiso es ofrecer habitaciones confortables y bien equipadas, contratos claros y un trato cercano. Conocemos las necesidades de nuestros clientes y trabajamos para que su estancia sea agradable y sin complicaciones.</p>
-    <p>Si buscas alquilar una habitación o quieres poner tu inmueble en manos de profesionales, estás en el lugar indicado.</p>
+  <!-- Experience Section (colapsable) -->
+  <section id="conocenos" class="details-section" style="margin-top:20px">
+    <details>
+      <summary>Conócenos</summary>
+      <div>
+        <p>Somos un equipo con <strong>amplia experiencia en la gestión de alojamientos</strong> en la isla de Tenerife. Llevamos años administrando más de <strong>100 habitaciones</strong> y pisos compartidos, ofreciendo un servicio de calidad tanto a huéspedes como a propietarios.</p>
+        <p>Nuestro compromiso es ofrecer habitaciones confortables y bien equipadas, contratos claros y un trato cercano. Conocemos las necesidades de nuestros clientes y trabajamos para que su estancia sea agradable y sin complicaciones.</p>
+        <p>Si buscas alquilar una habitación o quieres poner tu inmueble en manos de profesionales, estás en el lugar indicado.</p>
+      </div>
+    </details>
   </section>
 
   <!-- Existing sections grid -->
